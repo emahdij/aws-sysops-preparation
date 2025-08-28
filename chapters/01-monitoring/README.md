@@ -4,6 +4,18 @@
 
 Effective monitoring is essential for AWS environments to ensure reliability, performance, and security. This chapter covers AWS monitoring services with a focus on practical implementation.
 
+## 📊 Exam Weight
+
+**Domain 1 (Monitoring, Logging, and Remediation): 20% of exam (≈13 questions)**
+
+Expected question breakdown by service:
+- **CloudWatch Metrics**: 4-5 questions (dashboards, custom metrics, agent setup)
+- **CloudWatch Logs**: 3-4 questions (log groups, filters, insights)
+- **CloudWatch Alarms**: 2-3 questions (thresholds, composite alarms, actions)
+- **CloudTrail**: 2-3 questions (API logging, compliance, analysis)
+- **AWS Config**: 1-2 questions (configuration compliance, rules)
+- **EventBridge**: 1 question (event-driven automation)
+
 ## AWS Services Covered
 
 | Service | Primary Use | Status |
