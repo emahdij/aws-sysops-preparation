@@ -6,24 +6,28 @@ Effective monitoring is essential for AWS environments to ensure reliability, pe
 
 ## AWS Services Covered
 
-| Service | Primary Use |
-|---------|-------------|
-| **CloudWatch** | Collection and tracking of metrics, logs, and events |
-| **CloudTrail** | AWS API call recording and auditing |
-| **AWS Config** | Resource inventory, configuration history, and compliance |
-| **EventBridge** | Event-driven architectures and automation |
-| **X-Ray** | Application tracing and performance analysis |
+| Service | Primary Use | Status |
+|---------|-------------|---------|
+| [**01-CloudWatch Metrics**](./notes/01-cloudwatch-metrics.md)| Collection and tracking of metrics, dashboards, agent setup | ✅ Available |
+| [**02-CloudWatch Logs**](./notes/02-cloudwatch-logs.md)| Log collection, analysis, and insights | 🚧 Coming Soon |
+| [**03-CloudWatch Alarms**](./notes/03-cloudwatch-alarms.md)| Alerting and automated responses | 🚧 Coming Soon |
+| [**04-CloudTrail**](./notes/04-cloudtrail.md)| AWS API call recording and auditing | 🚧 Coming Soon |
+| [**05-AWS Config**](./notes/05-aws-config.md)| Resource inventory, configuration history, and compliance | 🚧 Coming Soon |
+| [**06-EventBridge**](./notes/06-eventbridge.md)| Event-driven architectures and automation | 🚧 Coming Soon |
+| [**07-Systems Manager**](./notes/07-systems-manager.md)| Operational insights and automation | 🚧 Coming Soon |
+| [**08-X-Ray**](./notes/08-x-ray.md)| Application tracing and performance analysis | 🚧 Coming Soon |
 
-## Study Materials
 
-- [01-CloudWatch Metrics](./notes/01-cloudwatch-metrics.md)
-<!-- - [02-CloudWatch Logs](./notes/02-cloudwatch-logs.md)
-- [03-CloudWatch Alarms](./notes/03-cloudwatch-alarms.md)
-- [04-CloudTrail](./notes/04-cloudtrail.md)
-- [05-AWS Config](./notes/05-aws-config.md)
-- [06-EventBridge](./notes/06-eventbridge.md)
-- [07-Systems Manager](./notes/07-systems-manager.md)
-- [08-X-Ray](./notes/08-x-ray.md) -->
+### Coming Soon 🚧
+- 02-CloudWatch Logs - Log collection and analysis
+- 03-CloudWatch Alarms - Alerting strategies and composite alarms
+- 04-CloudTrail - API auditing and compliance
+- 05-AWS Config - Configuration management and compliance
+- 06-EventBridge - Event-driven automation
+- 07-Systems Manager - Operational insights
+- 08-X-Ray - Application performance monitoring
+- Labs - Hands-on exercises for practical learning
+- Cheatsheets - Quick reference guides
 
 <!-- ## Labs
 - [CloudWatch Alarms & Dashboard](./labs/basic/01-alarms-dashboard.md) - Core monitoring setup
