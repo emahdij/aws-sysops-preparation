@@ -16,17 +16,26 @@
 - **Security best practices** with IAM, least-privilege, encryption
 - **Cost optimization** and real-world operational patterns
 
+## 🚀 Getting Started
+
+**New to this guide?** → [**Environment Setup**](chapters/00-configuration/setting-up-environment.md) (Start here to configure AWS CLI and Terraform)
+
 ## 📚 Learning Path
 
-### Core Chapters (follow in order)
-1. [**Monitoring & Observability**](chapters/01-monitoring/) - CloudWatch, alarms, dashboards
-2. [**Security & Identity**](chapters/02-security/) - IAM, KMS, least-privilege
-3. [**Networking**](chapters/03-networking/) - VPC, security groups, endpoints
-4. [**Compute**](chapters/04-compute/) - EC2, Auto Scaling, containers
-5. [**Storage**](chapters/05-storage/) - S3, EBS, backups
-6. [**Database**](chapters/06-database/) - RDS, DynamoDB operations
-7. [**Deployment**](chapters/07-deployment/) - CloudFormation, automation
-8. [**Cost & Advanced**](chapters/08-cost-advanced/) - Budgets, optimization
+### Available Now ✅
+1. [**Environment Setup**](chapters/00-configuration/) - AWS CLI, Terraform, development environment
+1. [**CloudWatch**](chapters/01-monitoring/README.md) - Complete metrics guide with examples
+
+### Coming Soon 🚧
+- **CloudWatch Logs & Alarms** - Log analysis and alerting
+- **Security & Identity** - IAM, KMS, least-privilege
+- **Networking** - VPC, security groups, endpoints
+- **Compute** - EC2, Auto Scaling, containers
+- **Storage** - S3, EBS, backups
+- **Database** - RDS, DynamoDB operations
+- **Deployment** - CloudFormation, automation
+- **Cost & Advanced** - Budgets, optimization
+
 
 <!-- ### Hands-on Projects
 - [**Observability Baseline**](projects/observability-baseline/) - Start here for monitoring setup -->
