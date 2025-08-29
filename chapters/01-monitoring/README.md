@@ -31,7 +31,6 @@ Expected question breakdown by service:
 
 
 ### Coming Soon 🚧
-- 02-CloudWatch Logs - Log collection and analysis
 - 03-CloudWatch Alarms - Alerting strategies and composite alarms
 - 04-CloudTrail - API auditing and compliance
 - 05-AWS Config - Configuration management and compliance
