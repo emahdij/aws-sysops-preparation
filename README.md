@@ -37,6 +37,7 @@
 - **Cost & Advanced** - Budgets, optimization
 
 
+Labs use real AWS resources. Always clean up after labs to avoid charges. See cleanup script. 
 <!-- ### Hands-on Projects
 - [**Observability Baseline**](projects/observability-baseline/) - Start here for monitoring setup -->
 
@@ -51,3 +52,7 @@ Labs use real AWS resources. Always clean up after labs to avoid charges. See [c
 ---
 
 **Ready to start?** → [Beginner Path](docs/START_HERE.md)
+
+
+
+Dont remember the aws cli syntax in the notes, We will practice in labs.
