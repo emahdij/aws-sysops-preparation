@@ -4,6 +4,15 @@
 
 AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. It records API calls and related events made by or on behalf of your AWS account, providing a comprehensive audit trail of all actions taken in your AWS environment.
 
+
+**Regional and Global Service Aspects**: 
+- CloudTrail itself is deployed as a regional service, but it can monitor both regional and global services
+- **Trail Configuration**: A trail can be configured as a single-region trail or a multi-region trail
+- **Global Service Events**: CloudTrail can record events from global services (like IAM, Route 53, CloudFront) in any region where you enable CloudTrail
+- **Best Practice**: Configure multi-region trails that include global service events to ensure comprehensive coverage
+
+This unique capability makes CloudTrail essential for organizations that need complete visibility across their entire AWS environment regardless of regional boundaries.
+
 ## Exam Relevance
 
 This module covers these Domain 1 tasks:
