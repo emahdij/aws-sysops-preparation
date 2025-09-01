@@ -4,6 +4,8 @@
 
 Amazon CloudWatch Logs is a service that enables you to centralize logs from all your systems, applications, and AWS services. It provides storage, monitoring, and access to log data, allowing you to troubleshoot issues, detect anomalies, and understand application behavior.
 
+**Regional Service**: CloudWatch Logs is a regional service. Log groups and their contents exist only in the region where they were created. For multi-region applications, you need to collect and query logs in each region separately or implement custom solutions for centralized logging.
+
 ## Exam Relevance
 
 This module covers these Domain 1 tasks:

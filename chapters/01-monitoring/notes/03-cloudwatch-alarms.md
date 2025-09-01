@@ -4,6 +4,8 @@
 
 Amazon CloudWatch Alarms monitor your metrics and trigger actions when thresholds are breached. They allow you to respond automatically to changes in your AWS resources and applications, enabling proactive management and reducing mean time to resolution.
 
+**Regional Service**: CloudWatch Alarms are regional resources that monitor metrics within the same region. Alarms cannot directly monitor metrics from other regions. For multi-region monitoring, you need to create separate alarms in each region or implement cross-region monitoring solutions.
+
 ## Exam Relevance
 
 This module covers these Domain 1 tasks:

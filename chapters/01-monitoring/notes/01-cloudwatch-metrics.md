@@ -4,6 +4,8 @@
 
 Amazon CloudWatch Metrics is the foundation of AWS monitoring. It collects and tracks metrics (time-series data) from your AWS resources and applications, providing visibility into system performance, resource utilization, and application health.
 
+**Regional Service**: CloudWatch Metrics is a regional service. Metrics exist only in the region where they are created and cannot be aggregated across regions natively. When designing multi-region architectures, you'll need to monitor each region's metrics separately or use custom solutions for cross-region visibility.
+
 ## Exam Relevance
 
 This module covers these Domain 1 tasks:

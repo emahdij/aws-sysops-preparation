@@ -18,6 +18,8 @@
 
 ## 🚀 Getting Started
 
+**New to AWS concepts?** → [**AWS Prerequisites**](docs/prerequisites.md) (Core AWS concepts you should understand first)
+
 **New to this guide?** → [**Environment Setup**](chapters/00-configuration/setting-up-environment.md) (Start here to configure AWS CLI and Terraform)
 
 ## 📚 Learning Path
@@ -27,7 +29,6 @@
 1. [**CloudWatch**](chapters/01-monitoring/README.md) - Complete metrics guide with examples
 
 ### Coming Soon 🚧
-- **CloudWatch Logs & Alarms** - Log analysis and alerting
 - **Security & Identity** - IAM, KMS, least-privilege
 - **Networking** - VPC, security groups, endpoints
 - **Compute** - EC2, Auto Scaling, containers
