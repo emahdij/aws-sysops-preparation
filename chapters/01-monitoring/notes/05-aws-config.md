@@ -40,8 +40,8 @@ A Configuration Item contains:
 - Configuration snapshot (all settings)
 - Relationships with other resources
 - Tags
-- Compliance status for applicable rules
-
+@@ -43,1 +43,0 @@
+-- Compliance status for applicable rules
 > **🔍 Exam Alert:** The SysOps exam often tests your understanding of which resource attributes are captured in configuration items and how to query this historical data.
 
 ### AWS Config Integration Points
