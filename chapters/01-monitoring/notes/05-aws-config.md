@@ -92,10 +92,9 @@ aws configservice put-config-rule \
 
 # Add a managed rule to check for unrestricted SSH access
 aws configservice put-config-rule \
-  --config-rule name=restricted-ssh,description="Checks if security groups allow unrestricted SSH access" \  # Rule name and description
-  --source="{owner=AWS,sourceIdentifier=RESTRICTED_INCOMING_TRAFFIC,sourceDetails=[{eventSource=aws.config,messageType=ConfigurationItemChangeNotification}]}" \  # Use built-in rule with notification trigger
-  --inputParameters="{blockedPort1=22}"  # Specify which port to check (SSH)
-```
+  --config-rule name=restricted-ssh,description="Checks if security groups allow unrestricted SSH access" \
+  --source="{owner=AWS,sourceIdentifier=RESTRICTED_INCOMING_TRAFFIC}" \
+  --inputParameters="{blockedPort1=22}"
 
 ---
 
