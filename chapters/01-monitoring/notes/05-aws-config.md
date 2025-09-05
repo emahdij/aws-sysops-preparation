@@ -194,39 +194,43 @@ resource "aws_config_config_rule" "encrypted_volumes" {
 
 ### Creating a Custom Config Rule with Lambda
 
-```python
-# Lambda function to check if instances have specific required tags
 import json
 import boto3
+from typing import Tuple
 
-REQUIRED_TAGS = ['Environment', 'Project', 'Owner']
+config = boto3.client("config")
+REQUIRED_TAGS = ["Environment", "Project", "Owner"]
 
-def evaluate_compliance(configuration_item):
-    if configuration_item['resourceType'] != 'AWS::EC2::Instance':
-        return 'NOT_APPLICABLE'
-        
-    tags = configuration_item['configuration'].get('tags', [])
-    tag_keys = [tag['key'] for tag in tags]
-    
-    for required_tag in REQUIRED_TAGS:
-        if required_tag not in tag_keys:
-            return 'NON_COMPLIANT'
-            
-    return 'COMPLIANT'
+def evaluate_compliance(ci: dict) -> Tuple[str, str]:
+    if ci["resourceType"] != "AWS::EC2::Instance":
+        return "NOT_APPLICABLE", "Rule targets EC2 instances only"
+    # Tags may appear in ci['tags'] (map) or ci['configuration']['tags'] (list)
+    tag_map = ci.get("tags") or {}
+    if isinstance(tag_map, dict):
+        keys = set(tag_map.keys())
+    else:
+        tags = ci.get("configuration", {}).get("tags", []) or []
+        keys = {t.get("key") or t.get("Key") for t in tags}
+    missing = [t for t in REQUIRED_TAGS if t not in keys]
+    if missing:
+        return "NON_COMPLIANT", f"Missing tags: {', '.join(missing)}"
+    return "COMPLIANT", "All required tags present"
 
-def lambda_handler(event, context):
-    invoking_event = json.loads(event['invokingEvent'])
-    configuration_item = invoking_event['configurationItem']
-    
-    result = evaluate_compliance(configuration_item)
-    
-    response = {
-        'compliance_type': result,
-        'annotation': f'Instance is missing required tags: {REQUIRED_TAGS}' if result == 'NON_COMPLIANT' else None
-    }
-    
-    return response
-```
+def lambda_handler(event, _context):
+    invoking_event = json.loads(event["invokingEvent"])
+    ci = invoking_event["configurationItem"]
+    compliance_type, annotation = evaluate_compliance(ci)
+    config.put_evaluations(
+        Evaluations=[{
+            "ComplianceResourceType": ci["resourceType"],
+            "ComplianceResourceId": ci["resourceId"],
+            "ComplianceType": compliance_type,
+            "Annotation": (annotation or "")[:256],
+            "OrderingTimestamp": ci["configurationItemCaptureTime"],
+        }],
+        ResultToken=event["resultToken"],
+    )
+    return {"compliance_type": compliance_type}
 
 ---
 
