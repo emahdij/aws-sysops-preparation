@@ -318,7 +318,6 @@ AWS Config charges for:
 Optimize costs by:
 - Being selective about which resource types to record
 - Using appropriate evaluation frequencies for rules
-- Using multi-account discounts through Organizations
 ---
 
 ## Monitoring and Troubleshooting
